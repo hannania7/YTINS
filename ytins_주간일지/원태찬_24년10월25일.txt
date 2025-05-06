@@ -1,0 +1,24 @@
+----금주----
+□ 연계과제 - 공실률
+  ㅇ 표제부, 층별개요는 PNU 추가
+  ㅇ 연속지적도는 좌표계인 epsg : 5186 -> epsg : 4326 좌표계 변환
+  ㅇ 상가개폐업
+    - 세로결합
+	- 좌표계 (epsg:5174 -> epsg:4326) 변환
+	- 좌표로 남양주시 자르기(sjoin 사용)
+	- 컬럼 재지정 및 정렬
+  ㅇ 카드매출
+	- 데이터 전처리(위와 동일)
+	- 검증
+	
+□ 502호 - 공실률
+  ㅇ 지도_세종시_건물_주소_경계내.geojson를 남양주시 범위로 생성 및 필요한 데이터 수집
+    - 필요 데이터의 컬럼 : 'ADR_MNG_NO', 'SIG_CD',	'RN_CD', 'BULD_SE_CD', 'BULD_MNNM', 'BULD_SLNO', 'BUL_MAN_NO', 'EQB_MAN_SN', 'EFFECT_DE', 'emd_cd', 'emd_nm', 'rd_addr', 'bld_nm'
+    - 수집한 데이터의 컬럼 : 'ADR_MNG_NO', 'SIG_CD', 'RN_CD', 'BULD_SE_CD', 'BULD_MNNM', 'BULD_SLNO', 'BUL_MAN_NO', 'EQB_MAN_SN', 'EFFECT_DE'
+	- 조인해서 만들 컬럼 : 'emd_cd', 'emd_nm', 'rd_addr', 'bld_nm'
+	  . 위의 4개의 컬럼 데이터를 얻기 위해 '주소기반산업지원서비스' 사이트에서 도로명주소 데이터 신청 후 승인 대기중
+	
+----차주----
+□ 502호 - 공실률
+  ㅇ 지도_세종시_건물_주소_경계내.geojson를 남양주시 범위로 생성 및 필요한 데이터 수집
+  ㅇ 공실률 테스트 분석 시작
